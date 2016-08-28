@@ -59,4 +59,15 @@ public class MusicPlayer {
 			return false;
 		}
 	}
+	
+	public boolean setVolume(float volume) {
+		if(player != null) {
+			player.setVolume(volume);
+			
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 }
