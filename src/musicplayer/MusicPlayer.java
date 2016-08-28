@@ -15,12 +15,7 @@ public class MusicPlayer {
 		player = new MediaPlayer(media);
 		
 		if(loop) {
-			player.setOnEndOfMedia(new Runnable() {
-				@Override
-				public void run() {
-					player.play();
-				}
-			});
+			player.setCycleCount(MediaPlayer.INDEFINITE);
 		}
 		
 		return true;
@@ -40,7 +35,6 @@ public class MusicPlayer {
 	public boolean play() {
 		if(player != null) {
 			player.play();
-			
 			return true;
 		}
 		else {
